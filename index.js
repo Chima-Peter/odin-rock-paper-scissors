@@ -17,3 +17,29 @@ function getPlayerChoice() {
     }
     return player;
 }
+function playGame(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        console.log("You drew a tie with computer. Replay");
+    }
+    else if (playerSelection === 'ROCK') {
+        if (computerSelection === 'SCISSORS') {
+            console.log('You win, Rock beats Scissors');
+        } else {
+            console.log('You lose, Paper beats Rock');
+        }
+    } else if (playerSelection === 'SCISSORS') {
+        if (computerSelection === 'ROCK') {
+            console.log('You lose, Rock beats Scissors');
+        }
+        else {
+            console.log('You win, Scissors beats Paper')
+        }
+    } else if (playerSelection === 'PAPER') {
+        if (computerSelection === 'ROCK') {
+            console.log('You win, Paper beats Rock');
+        }
+        else {
+            console.log('You lose, Scissors beats Paper');
+        }
+    }
+}
