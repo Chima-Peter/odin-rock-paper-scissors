@@ -12,12 +12,14 @@ function getComputerChoice() {
 function getPlayerChoice() {
     let player = prompt("Rock, Paper, Scissors ?");
     player = player.toLocaleUpperCase();
-    if (player !== 'ROCK' || player !== 'SCISSORS' || player !== 'PAPER') {
-        alert('Enter valid option');
+    if (player === 'ROCK' || player === 'SCISSORS' || player === 'PAPER') {
+        return player;
     }
-    return player;
+    alert('Enter valid option');
 }
 function playGame(playerSelection, computerSelection) {
+    console.log('You picked', playerSelection);
+    console.log('Computer picked', computerSelection);
     if (playerSelection === computerSelection) {
         console.log("You drew a tie with computer. Replay");
     }
@@ -43,3 +45,12 @@ function playGame(playerSelection, computerSelection) {
         }
     }
 }
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        playGame(getPlayerChoice(), getComputerChoice())
+    }
+}
+
+game();
+
