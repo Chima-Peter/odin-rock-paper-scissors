@@ -1,3 +1,4 @@
+// function to get the computer's choice
 function getComputerChoice() {
     let computer = Math.floor(Math.random() * 3);
     if (computer === 0) {
@@ -9,6 +10,7 @@ function getComputerChoice() {
     }
 }
 
+// function to get the choice of the user
 function getPlayerChoice() {
     let player = prompt("Rock, Paper, Scissors ?");
     player = player.toLocaleUpperCase();
@@ -17,6 +19,8 @@ function getPlayerChoice() {
     }
     alert('Enter valid option');
 }
+
+// fucntion to play the actual rock paper scissors game
 function playGame(playerSelection, computerSelection) {
     console.log('You picked', playerSelection);
     console.log('Computer picked', computerSelection);
@@ -46,9 +50,10 @@ function playGame(playerSelection, computerSelection) {
     }
 }
 
+// function to iterate through the game
 function game() {
     for (let i = 0; i < 5; i++) {
-        playGame(getPlayerChoice(), getComputerChoice())
+        playGame(getPlayerChoice(), getComputerChoice());
     }
 }
 
