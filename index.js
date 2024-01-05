@@ -10,16 +10,6 @@ function getComputerChoice() {
     }
 }
 
-// function to get the choice of the user
-function getPlayerChoice() {
-    let player = prompt("Rock, Paper, Scissors ?");
-    player = player.toLocaleUpperCase();
-    if (player === 'ROCK' || player === 'SCISSORS' || player === 'PAPER') {
-        return player;
-    }
-    alert('Enter valid option');
-}
-
 // fucntion to play the actual rock paper scissors game
 function playGame(playerSelection, computerSelection) {
     console.log('You picked', playerSelection);
@@ -49,13 +39,17 @@ function playGame(playerSelection, computerSelection) {
         }
     }
 }
-
-// function to iterate through the game
-function game() {
-    for (let i = 0; i < 5; i++) {
-        playGame(getPlayerChoice(), getComputerChoice());
+let container = document.querySelector("#container");
+container.addEventListener('click', (event) => {
+    switch(event.target.id) {
+        case 'rock':
+            playGame('rock', getComputerChoice());
+            break;
+        case 'paper':
+            playGame('paper', getComputerChoice());
+            break;
+        case 'scissors':
+            playGame('scissors', getComputerChoice());
+            break;
     }
-}
-
-game();
-
+})
