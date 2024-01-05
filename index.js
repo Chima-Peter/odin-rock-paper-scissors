@@ -15,41 +15,45 @@ function playGame(playerSelection, computerSelection) {
     console.log('You picked', playerSelection);
     console.log('Computer picked', computerSelection);
     if (playerSelection === computerSelection) {
-        console.log("You drew a tie with computer. Replay");
+        para.textContent = "You drew a tie with computer. Replay";
     }
     else if (playerSelection === 'ROCK') {
         if (computerSelection === 'SCISSORS') {
-            console.log('You win, Rock beats Scissors');
+            para.textContent = 'You win, Rock beats Scissors';
         } else {
-            console.log('You lose, Paper beats Rock');
+            para.textContent = 'You lose, Paper beats Rock';
         }
     } else if (playerSelection === 'SCISSORS') {
         if (computerSelection === 'ROCK') {
-            console.log('You lose, Rock beats Scissors');
+            para.textContent = 'You lose, Rock beats Scissors';
         }
         else {
-            console.log('You win, Scissors beats Paper')
+            para.textContent = 'You win, Scissors beats Paper';
         }
     } else if (playerSelection === 'PAPER') {
         if (computerSelection === 'ROCK') {
-            console.log('You win, Paper beats Rock');
+            para.textContent = 'You win, Paper beats Rock';
         }
         else {
-            console.log('You lose, Scissors beats Paper');
+            para.textContent = 'You lose, Scissors beats Paper';
         }
     }
 }
 let container = document.querySelector("#container");
+let div = document.createElement('div');
+let para = document.createElement('p');
 container.addEventListener('click', (event) => {
     switch(event.target.id) {
         case 'rock':
-            playGame('rock', getComputerChoice());
+            playGame('ROCK', 'SCISSORS');
             break;
         case 'paper':
-            playGame('paper', getComputerChoice());
+            playGame('PAPER', getComputerChoice());
             break;
         case 'scissors':
-            playGame('scissors', getComputerChoice());
+            playGame('SCISSORS', getComputerChoice());
             break;
     }
+    div.appendChild(para);
+    container.appendChild(div);
 })
