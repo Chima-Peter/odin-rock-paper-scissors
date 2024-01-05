@@ -12,8 +12,6 @@ function getComputerChoice() {
 
 // fucntion to play the actual rock paper scissors game
 function playGame(playerSelection, computerSelection) {
-    console.log('You picked', playerSelection);
-    console.log('Computer picked', computerSelection);
     if (playerSelection === computerSelection) {
         para.textContent = "You drew a tie with computer. Replay";
     }
