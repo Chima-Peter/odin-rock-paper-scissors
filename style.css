@@ -1,0 +1,153 @@
+body {
+    background-color : hsl(214, 47%, 23%);
+    font-family: 'Balo Semi Condensed', Roberto, 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+.container {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+}
+.sub-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid hsl(217, 16%, 45%);
+    border-radius: 5px;
+}
+.rps-container {
+    padding: 20px 400px 10px 20px;
+}
+.score-button {
+    border: 1px solid white;
+    margin: 15px;
+    background-color: rgb(255, 255, 240);
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+#score {
+    font-size: 30px;
+    color: hsl(229, 25%, 31%);
+}
+.score-button p {
+    color: hsl(229, 25%, 31%);
+    font-style: oblique;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+
+
+
+
+
+.img-container{
+    padding-top: 40px;
+}
+.ps-container {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.r-container {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+}
+.div-pad {
+    padding-right: 50px;
+}
+.rps-click {
+    background-color: rgb(255, 255, 240);
+    padding: 20px;
+    margin: 0px;
+    border-radius: 100%;
+}
+#paper {
+    border: 10px solid lightskyblue;
+}
+#scissors {
+    border: 10px solid yellow;
+}
+#rock {
+    border: 10px solid red;
+}
+
+
+
+
+.rule-div {
+    display: flex;
+    flex: auto;
+    justify-content: flex-end;
+    padding-right: 50px;
+    padding-bottom: 500px;
+}
+.btn-div {
+    padding: 10px 20px;
+    background-color: hsl(214, 47%, 23%);
+    color: rgb(255, 255, 240);
+    border: 1px solid rgb(255, 255, 240);
+    border-radius: 5px;
+}
+
+
+.attribution {
+    font-size: 15px;
+    text-align: center;
+    color: rgb(255, 255, 240);
+}
+.attribution a {
+    color: rgb(255, 255, 240);
+}
+
+
+
+
+
+
+
+
+
+
+.rpDiv {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0px 50px 0px;
+}
+.rpDiv p {
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(255, 255, 240);
+}
+#displayDiv {
+    display: flex;
+    justify-content: space-evenly;
+}
+#displayDiv div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#displayDiv div p {
+    font-size: 40px;
+    padding: 0px 0px 20px 0px;
+    margin: 0px;
+    font-style: italic;
+    color: rgb(255, 255, 240);
+}
+#displayDiv div button {
+    font-size: 13px;
+    align-self: center;
+    font-style: italic;
+    color: hsl(214, 47%, 23%);
+    background-color: rgb(255, 255, 240);
+    padding: 10px 30px;
+    border: 1px solid hsl(214, 47%, 23%);
+    border-radius: 5px;
+}
